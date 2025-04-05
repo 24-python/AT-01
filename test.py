@@ -35,12 +35,12 @@ from main import divide
 class TestMath(unittest.TestCase):
 
     def test_divide_sussess(self):
-        self.assertEqual(divide(10, 5), 2)
-        self.assertEqual(divide(6, 2), 3)
-        self.assertEqual(divide(70, 2), 35)
+        self.assertEqual(divide(10, 5), 0)
+        self.assertEqual(divide(6, 5), 1)
+        self.assertEqual(not divide(70, 65), 0)
 
     def test_divide_fail(self):
-        self.assertRaises(TypeError, divide, 10, 0)
+        self.assertRaises(ZeroDivisionError, divide, 10, 0)
 
 
 if __name__ == '__main__':

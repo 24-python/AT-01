@@ -17,6 +17,8 @@
 #     return number % 2 == 0
 
 def divide(a, b):
+
     if b == 0:
         raise ZeroDivisionError("На ноль делить нельзя")
-    return a / b
+    return a % b
+
